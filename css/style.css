@@ -16,12 +16,13 @@
 body {
     display: flex;
     justify-content: center;
+    margin: 0px;
 }
 
 .main-container {
     width: 100%;
     max-width: 1440px;
-    padding: 0 50px;
+    padding: 0 60px 0 40px;
     box-sizing: border-box;
 }
 
@@ -58,10 +59,228 @@ a {
     color: var(--main-bg-color)
 }
 
+/********Header*********/
+
+.top-navigation {
+    display: flex;
+    justify-content: space-between;
+}
+
+.links-to-accommodation-and-leisure {
+    display: flex;
+    list-style-type: none;
+    margin: 0px;
+}
+
+.logo {
+    width: 61.09px;
+    height:19px;
+    margin-top: 30px;
+    transition: transform 0.3s ease
+}
+
+.logo:hover,.hebergements-link:hover,.activites-link:hover {
+    transform: scale(1.1);
+}
+
+.hebergements-link {
+    margin-right: 69.5px;
+    color: #0065FC;
+    border-top: 2px solid #0065FC;
+    padding-top: 14px;
+    transition: transform 0.3s ease
+}
+
+.activites-link {
+    padding-top: 16px;
+    transition: transform 0.3s ease
+}
+
+/********Search-and-filters*******/
+
+.search-title2 {
+    font-size: 18px;
+}
+
+.search-title3 {
+    font-size: 17px;
+}
+
+.title-acceuil {
+    margin-top: 56px;
+}
+
+.message-acceuil {
+    margin-top: 8.5px;
+} 
+
+.number_of_affordable_housing {
+    display: flex;
+    margin-top: 36px;
+}
+
+.info {
+    font-size: 10px;
+    border: 1px #D9D9D9 solid;
+    border-radius: 50% 50% 50% 50%;
+    height: 22px;
+    width: 22px;
+    text-align: center;
+}
+
+.fa-info {
+    margin-top: 6px;
+}
+
+.number_of_affordable_housing p {
+    margin: 2px 0px 0px 9px;
+}
+
+
+/*********Search********/
+
+.search {
+    display: flex;
+    margin-top: 34px;
+}
+
+.search form {
+    display: flex;
+}
+
+.location-icon {
+    width: 50px;
+    height: 49px;
+    background-color: #F2F2F2;
+    text-align: center;
+    border-radius: 15px 0 0 15px;
+}
+
+.fa-location-dot {
+    margin-top: 15px;
+    color: black;
+    font-size: 18px;
+}
+
+.search-form {
+    padding: 0px;
+    height: 47px;
+    width: 195px;
+    font-size: 18px;
+    font-weight: 900;
+    text-align: center;
+    border: none;
+    border-top: 1px #F2F2F2 solid;
+    border-bottom: 1px #F2F2F2 solid;
+}
+
+.search-envoyer {
+    padding: 0px;
+    width: 132px;
+    height: 49px;
+    border: none;
+    background-color:#0065FC;
+    border-radius: 0 15px 15px 0;
+}
+
+.send-button {
+    cursor: pointer;
+    border-radius: 0 15px 15px 0;
+    position: relative;
+    transition: transform 0.3s ease
+}
+
+.send-button:hover {
+    box-shadow: 0 0 10px #0065FC;
+}
+
+.send-button .search-title2 {
+    margin: 14px 0px 0px 16px;
+    width: 132px;
+    height: 49px;
+    color: #FFFFFF;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+.fa-magnifying-glass {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    color: #FFFFFF;
+    display: none;
+}
+
+/********Filters********/
+
+.filters {
+    display: flex;
+    margin-top: 35px;
+    gap: 15px;
+}
+.filters .search-title2 {
+    margin: 15px 0px 0px 0px;
+}
+
+.filter-icon-containers, .left_filter-cards-container, .right_filter-cards-container {
+    display: flex;
+    gap: 15px;
+}
+
+.filter-cards {
+    cursor: pointer;
+    display: flex;
+    gap: 10px;
+    border: 2px #D9D9D9 solid;
+    border-radius: 25px;
+    height: 40px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    transition: transform 0.3s ease
+}
+
+.filter-cards:hover {
+    background-color: #DEEBFF;
+}
+
+.filter-cards h3 {
+    margin: auto;
+}
+
+.icons {
+    font-size: 22px;
+    margin: auto;
+}
+
+.economique {
+    padding-left: 15px;
+    padding-right: 17px;
+}
+
+.familial {
+    padding-left: 20px;
+    padding-right: 19px;
+    gap: 15px;
+}
+
+.romantique {
+    padding-left: 17px;
+    padding-right: 17px;
+    gap: 9px;
+}
+
+.pepites {
+    padding-left: 19px;
+    padding-right: 19px;
+}
+
+
 /****** Hebergements And Populaires ***********/
 .hebergements-and-populaires {
     display: flex;
     justify-content: space-between;
+    margin-top: 35px;
 }
 
 .hebergements-and-populaires section {
