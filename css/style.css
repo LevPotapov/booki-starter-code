@@ -98,7 +98,7 @@ a {
 
 /********Search-and-filters*******/
 
-.search-title2 {
+.search-title2, .filter-title2 {
     font-size: 18px;
 }
 
@@ -129,7 +129,7 @@ a {
 }
 
 .fa-info {
-    margin-top: 6px;
+    margin-top: 5px;
 }
 
 .number_of_affordable_housing p {
@@ -141,7 +141,7 @@ a {
 
 .search {
     display: flex;
-    margin-top: 34px;
+    margin-top: 34.5px;
 }
 
 .search form {
@@ -174,34 +174,47 @@ a {
     border-bottom: 1px #F2F2F2 solid;
 }
 
+.search-form:focus {
+    outline: 0;
+}
+
 .search-envoyer {
-    padding: 0px;
+    cursor: pointer;
     width: 132px;
     height: 49px;
     border: none;
-    background-color:#0065FC;
     border-radius: 0 15px 15px 0;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 1;
+    opacity: 0;
 }
 
 .send-button {
-    cursor: pointer;
-    border-radius: 0 15px 15px 0;
     position: relative;
-    transition: transform 0.3s ease
 }
 
-.send-button:hover {
+.search-envoyer:hover + .search-title2{
     box-shadow: 0 0 10px #0065FC;
 }
 
-.send-button .search-title2 {
-    margin: 14px 0px 0px 16px;
+.search-title2 {
+    margin: 0;
     width: 132px;
     height: 49px;
     color: #FFFFFF;
     position: absolute;
     top: 0px;
     left: 0px;
+    background-color: #0065FC;
+    border-radius: 0 15px 15px 0;
+    transition: transform 0.3s ease;
+}
+
+.search-title2 h2 {
+    font-size: 18px;
+    text-align: center;
 }
 
 .fa-magnifying-glass {
@@ -219,7 +232,8 @@ a {
     margin-top: 35px;
     gap: 15px;
 }
-.filters .search-title2 {
+
+.filter-title2 {
     margin: 15px 0px 0px 0px;
 }
 
@@ -285,14 +299,92 @@ a {
 
 .hebergements-and-populaires section {
     background-color: var(--main-bg-color);
-    border-radius: 20px;
+    border-radius: 15px;
     padding: 30px;
     box-sizing: border-box;
 }
 
+.card {
+    transition: transform 0.3s ease
+}
+
+.card:hover {
+    transform: scale(1.1);
+}
+
+
 /****** Hebergements ***********/
 .hebergements {
     width: 65%;
+}
+
+.hebergements-cards {
+    margin-top: 30px;
+    display: grid;
+    grid: 1fr 1fr / 1fr 1fr 1fr;
+    grid-gap: 30px;
+}
+
+.hotel-port, .hotel-mouettes {
+    height: 113px;
+    width: 100%;
+    object-position: left -22px;
+    border-radius: 20px 20px 0px 0px;
+}
+
+.auberge-panier {
+    height: 113px;
+    width: 100%;
+    object-position: left -12px;
+    border-radius: 20px 20px 0px 0px;
+}
+
+.auberge-canebiere {
+    height: 113px;
+    width: 100%;
+    object-position: 3px -24px;
+    border-radius: 20px 20px 0px 0px;
+}
+
+.hotel-mer {
+    height: 113px;
+    width: 100%;
+    object-position: 1px -55px;
+    border-radius: 20px 20px 0px 0px;
+}
+
+.chez-amina {
+    height: 113px;
+    width: 100%;
+    object-position: 0px -122px;
+    border-radius: 20px 20px 0px 0px;
+}
+
+.hebergements-cards .card-title {
+    margin: 4.5px 0px 0px 10px;
+}
+
+.hebergements-cards .card-subtitle {
+    font-size: 14px;
+    margin: 8px 0px 0px 10px;
+}
+
+.hebergements-cards .card-rating {
+    margin: 6px 0px 8px 9px;
+}
+
+.hebergements h3 {
+    margin: 30px 0px 0px 0px;
+    font-size: 18px;
+}
+
+.hebergements span {
+    transition: transform 0.3s ease
+}
+
+.hebergements span:hover {
+    text-shadow: 1px 1px 2px #000;
+    cursor: pointer;
 }
 
 /****** Populaires ***********/
@@ -308,7 +400,7 @@ a {
 
 .populaires-cards .card {
     display: flex;
-    margin-top: 33px;
+    margin-top: 30px;
 }
 
 .populaires-cards img {
@@ -334,13 +426,82 @@ a {
 
 .populaires-cards .card-subtitle {
     margin: 0;
+    font-size: 14px;
 }
 
 .populaires-cards .card-rating {
-    margin-bottom: 5px;
+    margin-bottom: 2px;
+    letter-spacing: -2px;
+}
+
+.fa-chart-line {
+    margin-right: 1px;
+    margin-bottom: 1px;
 }
 
 
+/*********Activités********/
+
+.activites {
+    margin-top: 64px;    
+}
+
+.activites .card {
+    padding: 0px 0px 20px 0px;
+}
+
+.activites h1 {
+    margin-left: 30px;
+}
+
+.activites-cards {
+    margin-top: 35px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.activites img {
+    height: 380px;
+    width: 297.5px;
+    border-radius: 20px 20px 0px 0px;
+}
+
+.activites .card-title {
+    margin: 15px 0px 0px 19px;
+}
+
+/*********Footer********/
+
+.bottom-navigation {
+    margin-top: 65px;
+    padding-bottom: 4px;
+    display: grid;
+    background-color: #F2F2F2;
+    grid: 1fr / 1fr 1fr 1fr;    
+}
+
+.bottom-navigation-list {
+    list-style-type: none;
+    margin: 20px 0px 0px 20px;
+    padding: 0px;
+}
+
+.bottom-navigation h3 {
+    margin: 0px;
+    font-size: 18px;
+}
+
+.bottom-navigation li {
+    margin-bottom: 15px;
+}
+
+.bottom-navigation a {
+    transition: transform 0.3s ease
+}
+
+.bottom-navigation a:hover {
+    text-shadow: 1px 1px 2px #000;
+}
 
 
 /* Le code ci-dessous correspond à la version responsive uniquement */
