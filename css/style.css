@@ -339,11 +339,11 @@ a {
     font-size: 18px;
 }
 
-.hebergements span {
+.hebergements h3 a {
     transition: transform 0.3s ease
 }
 
-.hebergements span:hover {
+.hebergements h3 a:hover {
     text-shadow: 1px 1px 2px #000;
     cursor: pointer;
 }
